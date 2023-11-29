@@ -62,17 +62,23 @@ export function Message(props: Props) {
 						settings.alignment === 'left'
 							? 'flex-start'
 							: settings.alignment === 'center'
-							? 'center'
-							: 'flex-end',
+								? 'center'
+								: 'flex-end',
 				}}
 			>
-				<div className='message__username'>
-					<div className='message__username--badges'>
-						{message.badges.map((badge) => (
-							<img src={`/badges/${badge}.png`} alt={badge} key={badge} />
-						))}
+				<div className='message__username' style={{
+					justifyContent:
+						settings.alignment === 'left'
+							? 'flex-start'
+							: settings.alignment === 'center'
+								? 'center'
+								: 'flex-end',
+				}}>
+					<div className='message__username__content' style={{
+						background: message.color
+					}}>
+						<p>{message.username}</p>
 					</div>
-					<p>{message.username}</p>
 				</div>
 
 				<div

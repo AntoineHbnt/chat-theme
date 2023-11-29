@@ -16,7 +16,7 @@ export function Container(props: Props) {
 		<div
 			className='container'
 			style={{
-				fontSize: settings.fontSize || 16,
+				fontSize: settings.fontSize || 20,
 				textAlign: settings.alignment || 'left',
 			}}
 		>
