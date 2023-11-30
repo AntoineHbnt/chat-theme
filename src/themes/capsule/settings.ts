@@ -1,4 +1,4 @@
-import { ChatSettings } from '../types';
+import { ChatSettings } from '../../types';
 
 export type CustomSettings = {};
 

@@ -1,5 +1,5 @@
 import { AnimatePresence } from 'framer-motion';
-import type { ChatSettings, TwitchMessage } from '../types';
+import type { ChatSettings, TwitchMessage } from '../../types';
 import { Message } from './message';
 import './style.css';
 import { CustomSettings } from './settings';
@@ -16,7 +16,7 @@ export function Container(props: Props) {
 		<div
 			className='container'
 			style={{
-				fontSize: settings.fontSize || 20,
+				fontSize: settings.fontSize || 16,
 				textAlign: settings.alignment || 'left',
 			}}
 		>
