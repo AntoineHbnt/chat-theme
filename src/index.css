@@ -146,7 +146,7 @@ main {
 .message-demo {
   flex: 1;
   height: 100dvh;
-  background-color: #040405;
+  background-color: #fff;
   padding: 20px;
 }
 

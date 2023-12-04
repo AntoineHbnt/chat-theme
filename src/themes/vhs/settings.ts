@@ -4,7 +4,7 @@ export type CustomSettings = {};
 
 export const themeSettings: ChatSettings & CustomSettings = {
 	isDemo: true,
-	alignment: 'left',
+	alignment: 'center',
 	fontSize: 16,
 	scrollAnimation: true,
 	animation: true,

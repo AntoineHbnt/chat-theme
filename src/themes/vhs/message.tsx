@@ -82,6 +82,7 @@ export function Message(props: Props) {
 					<p
 						ref={messageUsernameRef}
 						className='glitch'
+						data-background={settings.background}
 						data-text={messageUsername}
 					>
 						{message.username}
@@ -91,6 +92,7 @@ export function Message(props: Props) {
 				<div
 					ref={messageContentRef}
 					data-text={messageContent}
+					data-background={settings.background}
 					className='message__content glitch'
 					dangerouslySetInnerHTML={{ __html: message.message }}
 				></div>

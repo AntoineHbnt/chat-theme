@@ -32,8 +32,8 @@ export function Container(props: Props) {
 			{settings.background ? <div className='radial-effect' /> : null}
 			{settings.background ?
 				<div className='trame-effect'>
-					<div className='trame-effect__block--1' />
-					<div className='trame-effect__block--2' />
+					<div className='trame-effect__block' />
+					<div className='trame-effect__block' />
 				</div>
 				: null}
 		</div >
