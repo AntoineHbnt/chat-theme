@@ -18,10 +18,7 @@ export function Message(props: Props) {
 			opacity: 0,
 			transition: {
 				duration: 0.3,
-				delay:
-					settings?.hideTime === 0 || !settings?.hideTime
-						? 100000
-						: settings?.hideTime,
+				delay: settings?.hideTime === 0 || !settings?.hideTime ? 100000 : settings?.hideTime,
 				ease: 'easeInOut',
 				type: 'spring',
 			},
@@ -30,15 +27,14 @@ export function Message(props: Props) {
 
 	const displayAnimation = {
 		initial: {
-			/* [settings?.alignment === 'left' ? 'right' : 'left']: 50, */
-			scale: 0
-
+			opacity: 0,
+			scale: 0,
 		},
 		in: {
+			opacity: 1,
 			scale: 1,
-			/* [settings?.alignment === 'left' ? 'right' : 'left']: 0, */
 			transition: {
-				duration: 1,
+				duration: 5,
 				ease: 'easeInOut',
 				type: 'spring',
 				stiffness: 260,
@@ -46,13 +42,14 @@ export function Message(props: Props) {
 			},
 		},
 	};
-
 	const bubbleArrowAnimation: Variants = {
 		initial: {
-			transform: 'translate(40%, 100%)'
+			transform: settings.alignment === "right" ?
+				'translate(40%, 100%)' : 'translate(-40%, 100%)'
 		},
 		in: {
-			transform: 'translate(40%, 150%)',
+			transform: settings.alignment === "right" ?
+				'translate(40%, 150%)' : 'translate(-40%, 150%)',
 			transition: {
 				duration: 1,
 				ease: 'easeIn',
@@ -85,10 +82,15 @@ export function Message(props: Props) {
 				variants={displayAnimation}
 				initial={settings?.animation ? 'initial' : false}
 				animate={settings?.animation ? 'in' : false}
-				className='comic__message__wrapper'
+				className={`comic__message__wrapper ${settings.alignment === 'right' ? 'shadow-right' : 'shadow-left'}`}
 			>
 				<div className='comic__message__inner'>
-					<div className='comic__message__username'>
+					<div
+						className='comic__message__username'
+						style={{
+							textAlign: settings.alignment,
+						}}
+					>
 						<p>{message.username}</p>
 					</div>
 					<div
@@ -97,13 +99,11 @@ export function Message(props: Props) {
 					/>
 				</div>
 				<div className='comic__message__appendix'>
-					<div className='corner bottom-left' />
-					<div className='corner top-right' />
 					<motion.div
 						variants={bubbleArrowAnimation}
 						initial={settings?.animation ? 'initial' : false}
 						animate={settings?.animation ? 'in' : false}
-						className='triangle right'
+						className={`triangle ${settings.alignment === 'right' ? 'right' : settings.alignment === 'center' ? 'center' : 'left'}`}
 					/>
 				</div>
 			</motion.div>

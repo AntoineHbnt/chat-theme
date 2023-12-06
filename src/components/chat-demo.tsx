@@ -20,7 +20,7 @@ export function ChatDemo() {
 				const newMessage = generateTwitchMessage('twitch');
 				return [...d, newMessage] as TwitchMessage[];
 			});
-		}, 2500);
+		}, 5000);
 
 		return () => {
 			clearInterval(interval);
