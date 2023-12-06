@@ -1,0 +1,104 @@
+@font-face {
+	font-family: 'Bazinga!';
+	src: url('./fonts/Bazinga-Regular.otf'); 
+}
+
+.comic {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: flex-end;
+	overflow: hidden;
+	gap: 1em;
+	height: 100%;
+	--box-shadow-gap: 0.375em;
+}
+
+.comic__message {
+	display: flex;
+	width: 100%;
+	position: relative;
+	padding: 0em  var(--box-shadow-gap) calc(var(--box-shadow-gap)*2.5) var(--box-shadow-gap) ;
+}
+
+.comic__message__wrapper {
+	position: relative;
+	width: fit-content;
+}
+
+.comic__message__inner {
+	display: inline-flex;
+	padding: 1em;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.5em;
+	border: 0.1875em solid #000;
+	box-shadow: var(--box-shadow-gap) var(--box-shadow-gap) 0em 0em #000;
+	background: #FFF;
+	z-index: 20;
+}
+
+.comic__message__appendix {
+	position: absolute;
+	inset: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+}
+
+.triangle.right {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border: 0 solid transparent;
+	border-left-width: 0.9375em;
+	border-right-width: 0px;
+	border-top: 0.625em solid black;
+	bottom: 0;
+	right: 0;
+	transform: translateX(40%);
+}
+
+.corner {
+	position: absolute;
+	--length: 0.53033008589em;
+	width: var(--length);
+	height: calc(var(--length) / 2);
+	background-color: #000;
+}
+
+.corner.bottom-left {
+	bottom: 0;
+	left: 0;
+	transform: translate(2.5%, 82.5%) rotate(45deg);
+}
+
+.corner.top-right {
+	top: 0;
+	right: 0;
+	transform: translate(67.5%, 55%) rotate(45deg);
+}
+
+.comic__message__username {
+	color: #000;
+	font-family: 'Bazinga!';
+	font-size: 1.25em;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.comic__message__content {
+	color: #000;
+	font-family: 'Inter', sans-serif;
+	font-size: 0.8125em;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.comic__message__content img {
+	width: 1.25em;
+	display: inline-flex;
+}
