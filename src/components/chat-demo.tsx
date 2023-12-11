@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { generateTwitchMessage } from '../utils/generate-chat-message';
 import { TwitchMessage } from '../types';
-import { Container } from '../themes/comic/container';
-import { themeSettings } from '../themes/comic/settings';
+import { Container } from '../themes/template/container';
+import { themeSettings } from '../themes/template/settings';
 
 export function ChatDemo() {
 	const [messages, setMessages] = useState<TwitchMessage[]>([]);
