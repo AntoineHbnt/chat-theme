@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Playfair+Display:wght@500;900&display=swap');
+
+.mystical {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: flex-end;
+	gap: 2.5em;
+	height: 100%;
+}
+
+.mystical__message {
+	width: 100%;
+	position: relative;
+}
+
+.mystical__message__inner {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	font-family: Playfair Display;
+	position: relative;
+}
+
+.mystical__message__username {
+	position: absolute;
+	top: -50%;
+	color: #FFF;
+	text-shadow: 0 0 .5em #FFC700;
+	font-family: Playfair Display;
+	font-size: 1.8em;
+	font-style: normal;
+	font-weight: 900;
+	line-height: normal;
+	z-index: 10;
+}
+
+.mystical__message__username--badges {
+	display: none;
+	align-items: center;
+	gap: 0.15em;
+}
+
+.mystical__message__username--badges img {
+	width: 1.1em;
+	height: 1.1em;
+	display: block;
+	flex-shrink: 0;
+}
+
+.mystical__message__content {
+	/*Layout*/
+	display: inline-flex;
+	padding: 1.25em 1em 0.75em 1em;
+	justify-content: center;
+	align-items: center;
+	gap: 0.625em;
+	/*Style*/
+	border: 0.0625em solid #D15814;
+	background: rgba(0, 0, 0, 0.0);
+	box-shadow: 0 0 1em 0 rgba(255, 122, 0, 0.30), 0 0 0.875em 0 rgba(222, 90, 16, 0.42) inset;
+	/*Font*/
+	color: #FFF;
+	text-shadow: 0 0 .5em #FFC700;
+	font-family: Playfair Display;
+	font-size: 1.0625em;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.mystical__message__content img {
+	width: 1.25em;
+	display: inline-flex;
+}

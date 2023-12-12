@@ -1,6 +1,6 @@
 import { ChatDemo } from './components/chat-demo';
-import { Container } from './themes/template/container';
-import { themeSettings } from './themes/template/settings';
+import { Container } from './themes/mystical/container';
+import { themeSettings } from './themes/mystical/settings';
 import { generateTwitchMessage } from './utils/generate-chat-message';
 
 export function App() {

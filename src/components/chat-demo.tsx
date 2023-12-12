@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { generateTwitchMessage } from '../utils/generate-chat-message';
 import { TwitchMessage } from '../types';
-import { Container } from '../themes/template/container';
-import { themeSettings } from '../themes/template/settings';
+import { Container } from '../themes/mystical/container';
+import { themeSettings } from '../themes/mystical/settings';
 
 export function ChatDemo() {
 	const [messages, setMessages] = useState<TwitchMessage[]>([]);
@@ -20,7 +20,7 @@ export function ChatDemo() {
 				const newMessage = generateTwitchMessage('twitch');
 				return [...d, newMessage] as TwitchMessage[];
 			});
-		}, 5000);
+		}, 1250);
 
 		return () => {
 			clearInterval(interval);
