@@ -26,7 +26,6 @@
 
 .mystical__message__username {
 	position: absolute;
-	top: -50%;
 	color: #FFF;
 	text-shadow: 0 0 .5em #FFC700;
 	font-family: Playfair Display;
@@ -35,6 +34,7 @@
 	font-weight: 900;
 	line-height: normal;
 	z-index: 10;
+	top: -.85em;
 }
 
 .mystical__message__username--badges {

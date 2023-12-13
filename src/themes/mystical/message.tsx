@@ -1,10 +1,9 @@
 import { ChatSettings, TwitchMessage } from '../../types';
 import { motion } from 'framer-motion';
-import { CustomSettings } from './settings';
 
 type Props = {
     message: TwitchMessage;
-    settings: ChatSettings & CustomSettings;
+    settings: ChatSettings;
 };
 
 export function Message(props: Props) {
@@ -31,11 +30,11 @@ export function Message(props: Props) {
     const usernameAnimation = {
         initial: {
             opacity: 0,
-            top: '-45%',
+            top: '-1.5em',
         },
         in: {
             opacity: 1,
-            top: '-40%',
+            top: '-0.85em',
             transition: {
                 duration: 0.6,
                 delay: .4,
@@ -103,7 +102,6 @@ export function Message(props: Props) {
                     </div>
                     <p>{message.username}</p>
                 </motion.div>
-
                 <motion.div
                     variants={contentAnimation}
                     initial={settings?.animation ? 'initial' : false}
